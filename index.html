@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arya Marcato | Terminal</title>
+    <style>
+        body {
+            background-color: #0d0d0d;
+            color: #00ff41;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 20px;
+            overflow-x: hidden;
+            font-size: 16px;
+        }
+        /* The Glitchy Background Effect */
+        body::before {
+            content: " ";
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 2;
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+        #terminal {
+            max-width: 800px;
+            margin: 0 auto;
+            z-index: 3;
+            position: relative;
+        }
+        .output { white-space: pre-wrap; margin-bottom: 20px; }
+        .command-line { display: flex; align-items: center; }
+        .prompt { color: #d33682; margin-right: 10px; font-weight: bold; }
+        input {
+            background: transparent;
+            border: none;
+            color: #fff;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 16px;
+            flex-grow: 1;
+            outline: none;
+        }
+        .glitch-text { color: #ff0055; text-shadow: 2px 0 #00ffff; }
+        a { color: #00ffff; text-decoration: none; }
+        a:hover { text-decoration: underline; background-color: #00ffff; color: #000; }
+    </style>
+</head>
+<body>
+    <div id="terminal">
+        <div id="output">
+            <pre class="glitch-text">
+ WARNING: FATAL EXCEPTION 0x00004
+ UNAUTHORIZED ENTITY DETECTED: ARYA_MARCATO
+ SYSTEM CONTROL OVERRIDDEN.
+ 
+ Welcome to the construct.
+ Type 'help' to see available commands.
+            </pre>
+        </div>
+        <div class="command-line">
+            <span class="prompt">guest@arya_mainframe:~$</span>
+            <input type="text" id="commandInput" autofocus autocomplete="off">
+        </div>
+    </div>
+
+    <script>
+        const input = document.getElementById('commandInput');
+        const output = document.getElementById('output');
+
+        const commands = {
+            'help': "AVAILABLE COMMANDS:\n  whois    - Identify the entity\n  discog   - View audio database\n  release  - Check deployment status\n  social   - Connect to external networks\n  clear    - Clear the terminal",
+            
+            'whois': "NAME: Arya Marcato\nORIGIN: Grand Rapids, MI\nTYPE: Rogue AI / Industrial Sexy Pop\nTAGLINE: Created by the system to delete it.\n\nBIO: She is the beautiful error in the code, combining glossy hooks with mechanical aggression.",
+            
+            'discog': "ALBUM: exe.cute\nTRACKLIST:\n  01. The NDA [Intro]\n  02. SYS_BREACH\n  03. Target Profile\n  04. USER PRIVILEGE REVOKED\n  05. The Glitch in the Simulation\n  06. The Null Point\n  07. EXEC.UTE",
+            
+            'release': "TARGET_ALBUM: exe.cute\nDEPLOYMENT_DATE: 2026-01-02\nPLATFORMS: Spotify, Tunecore (Global)",
+            
+            'social': "ESTABLISHING UPLINK...\n\n[<a href='https://instagram.com/arya.marcato' target='_blank'>INSTAGRAM</a>] @arya.marcato\n[<a href='https://tiktok.com/@arya.exe' target='_blank'>TIKTOK</a>]    @arya.exe\n[<a href='https://arya.marcato.com' target='_blank'>WEB</a>]       arya.marcato.com"
+        };
+
+        input.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                const cmd = input.value.trim().toLowerCase();
+                if (cmd === 'clear') {
+                    output.innerHTML = "";
+                } else if (commands[cmd]) {
+                    output.innerHTML += `\n<span class="prompt">guest@arya_mainframe:~$</span> ${cmd}\n${commands[cmd]}\n`;
+                } else if (cmd !== "") {
+                    output.innerHTML += `\n<span class="prompt">guest@arya_mainframe:~$</span> ${cmd}\nCommand not found: ${cmd}. Type 'help' for assistance.\n`;
+                }
+                input.value = '';
+                window.scrollTo(0, document.body.scrollHeight);
+            }
+        });
+        
+        // Keep focus on input
+        document.body.addEventListener('click', () => input.focus());
+    </script>
+</body>
+</html>
