@@ -4,12 +4,13 @@
   "name": "Arya Marcato",
   "ascii": "arya",
   "social": {
-    "github": "",
+    "github": "https://github.com/aryamarcato-official",
     "linkedin": ""
   },
   "email": "contact@arya.marcato.com",
   "ps1_hostname": "arya_mainframe",
   "ps1_username": "guest",
+  "repo": "https://github.com/aryamarcato-official/aryamarcato-official.github.io",
   "resume_url": "",
   "colors": {
     "light": {
