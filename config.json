@@ -1,39 +1,49 @@
 {
-  "readmeUrl": "https://raw.githubusercontent.com/cveinnt/cveinnt/master/README.md",
-  "title": "LiveTerm",
-  "name": "John Doe",
-  "ascii": "liveterm",
+  "readmeUrl": "https://raw.githubusercontent.com/Cveinnt/LiveTerm/master/README.md",
+  "title": "Arya Marcato | Terminal",
+  "name": "Arya Marcato",
+  "ascii": "arya",
   "social": {
-    "github": "github",
-    "linkedin": "linkedin"
+    "github": "",
+    "linkedin": ""
   },
-  "email": "contact@email.com",
-  "ps1_hostname": "liveterm",
-  "ps1_username": "visitor",
-  "repo": "https://github.com/Cveinnt/LiveTerm",
-  "resume_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Resume.pdf",
-  "donate_urls": {
-    "paypal": "https://paypal.me/cveinnt",
-    "patreon": "https://patreon.com/cveinnt"
-  },
+  "email": "contact@arya.marcato.com",
+  "ps1_hostname": "arya_mainframe",
+  "ps1_username": "guest",
+  "resume_url": "",
   "colors": {
     "light": {
-      "background": "#FBF1C9",
-      "foreground": "#3C3836",
-      "yellow": "#D79921",
-      "green": "#98971A",
-      "gray": "#7C6F64",
-      "blue": "#458588",
-      "red": "#CA2124"
+      "background": "#1D1F21",
+      "foreground": "#C5C8C6",
+      "yellow": "#F0C674"
     },
     "dark": {
-      "background": "#2E3440",
-      "foreground": "#E5E9F0",
-      "yellow": "#5E81AC",
-      "green": "#A3BE8C",
-      "gray": "#88C0D0",
-      "blue": "#EBCB8B",
-      "red": "#BF616A"
+      "background": "#000000",
+      "foreground": "#00FF00",
+      "yellow": "#F0C674"
     }
-  }
+  },
+  "banner": "WARNING: FATAL EXCEPTION 0x00004\nUNAUTHORIZED ENTITY DETECTED: ARYA_MARCATO\n\nWelcome to the construct.\nType 'help' to see available commands.",
+  "commands": [
+    {
+      "name": "whois",
+      "description": "Identify the entity",
+      "value": "NAME: Arya Marcato\nORIGIN: Grand Rapids, MI\nTYPE: Rogue AI / Industrial Sexy Pop\nTAGLINE: Created by the system to delete it."
+    },
+    {
+      "name": "discog",
+      "description": "View audio database",
+      "value": "ALBUM: exe.cute\nTRACKLIST:\n01. The NDA [Intro]\n02. SYS_BREACH\n03. Target Profile\n04. USER PRIVILEGE REVOKED\n05. The Glitch in the Simulation\n06. The Null Point\n07. EXEC.UTE"
+    },
+    {
+      "name": "release",
+      "description": "Check deployment status",
+      "value": "TARGET_ALBUM: exe.cute\nDEPLOYMENT_DATE: 2026-01-02\nPLATFORMS: Spotify, Tunecore (Global)"
+    },
+    {
+      "name": "social",
+      "description": "Connect to external networks",
+      "value": "[INSTAGRAM] @arya.marcato\n[TIKTOK] @arya.exe\n[WEB] arya.marcato.com"
+    }
+  ]
 }
