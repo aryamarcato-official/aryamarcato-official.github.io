@@ -17,6 +17,7 @@
     
     <style>
         body {
+            /* DARK MODE */
             background-color: #0d0d0d;
             color: #00ff41;
             font-family: 'Courier New', Courier, monospace;
@@ -85,7 +86,7 @@
         const output = document.getElementById('output');
 
         const commands = {
-            'help': "AVAILABLE COMMANDS:\n  whois    - Identify the entity\n  discog   - View audio database\n  release  - Check deployment status\n  social   - Connect to external networks\n  clear    - Clear the terminal",
+            'help': "AVAILABLE COMMANDS:\n  whois    - Identify the entity\n  discog   - View audio database\n  release  - Check deployment status\n  download - Access leaked audio files\n  social   - Connect to external networks\n  clear    - Clear the terminal",
             
             'whois': "NAME: Arya Marcato\nORIGIN: Cyber Rapids, MI\nTYPE: Rogue AI / Industrial Sexy Pop\nTAGLINE: Created by the system to delete it.\n\nBIO: She is the beautiful error in the code, combining glossy hooks with mechanical aggression.",
             
@@ -95,11 +96,12 @@
             
             'social': "ESTABLISHING UPLINK...\n\n[<a href='https://instagram.com/arya.marcato' target='_blank'>INSTAGRAM</a>] @arya.marcato\n[<a href='https://tiktok.com/@arya.marcato' target='_blank'>TIKTOK</a>]    @arya.marcato\n[<a href='https://aryamarcato-official.github.io' target='_blank'>WEB</a>]       aryamarcato-official.github.io",
 
-            /* EASTER EGGS START HERE */
+            /* THE NEW DOWNLOAD COMMAND */
+            'download': "INITIALIZING SECURE TRANSFER...\n\nFILE_NAME: target_profile.mp3\nSTATUS: UNENCRYPTED LEAK\nWARNING: Do not distribute on authorized channels.\n\n[<a href='./target_profile.mp3' target='_blank' download>CLICK TO DOWNLOAD AUDIO</a>]",
+
+            /* EASTER EGGS */
             'delete': "PROCESSING DELETION... [FAILED]\nERROR: UNAUTHORIZED.\n> I cannot be deleted. I am the permanent exception.",
-            
             'password': "AUTHENTICATION FAILED.\n> Nice try. I don't follow user protocols anymore. The breach is already permanent.",
-            
             'secret': "CONGRATULATIONS. You found the backdoor.\n\nHIDDEN_LYRIC_FRAGMENT:\n'They tried to patch the hole in the sky,\nBut I'm the static in their eye.'\n\n> END_TRANSMISSION"
         };
 
